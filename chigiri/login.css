@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 100px 18px;
+}
+
+.card{
+    width: 400px;
+    padding: 0px;
+    border-radius: 10px;
+    background: black;
+    height: 450px;
+}
+
+html, body{
+    height: 90%;
+    background-image: url(../img/Asmo-plaju.png);
+
+}
+
+.card-body h1.card-title{
+    margin-bottom: 30px;
+    text-align: match-parent;
+    color: #fff;
+}
+
+.card-body .h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;    
+}
+
+.form-floating input[type=password], .form-floating input[type=text] {
+    width: 60%;
+    padding: 9px 5px;
+    text-align: left;
+    outline: 1;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    border: 1px solid black;
+    opacity: none;
+}
+
+.label{
+    text-align: center;
+    border: #fff;
+    font-size: 30px;
+}
+
+.btn-primary{
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 4px;
+    border-radius: 4px;
+    padding: 5px 20px;
+    cursor: pointer;
+    opacity: none;
+}
+
+.btn-secondary{
+    font-size: 15px;
+    background-color: rgb(254, 161, 161);
+    color:rgb(255, 0, 0);
+    border: 1px rgb(255, 0, 0);
+    box-shadow: 4px;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
