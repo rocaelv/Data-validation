@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 100px 18px;
+}
+
+.card{
+    width: 400px;
+    padding: 0px;
+    border-radius: 10px;
+    background: black;
+    height: 500px;
+}
+
+html, body{
+    height: 100%;
+    background-image: url(../img/Asmo-plaju.png);
+}
+
+.card-body h1.card-title{
+    margin-bottom: 30px;
+    text-align: match-parent;
+    color: #fff;
+}
+
+.card-body .h1{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-floating input[type=password], .form-floating input[type=text]{
+    width: 60%;
+    padding: 9px 5px;
+    text-align: left;
+    outline: 1px;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.label{
+    text-align: center;
+    border: #fff;
+    font-size: 30px;
+}
+
+.btn-primary{
+    background-color: #fff;
+    border: 1px solid black;
+    box-shadow: 4px;
+    border-radius: 4px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
