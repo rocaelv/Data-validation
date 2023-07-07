@@ -22,6 +22,8 @@ include 'config/koneksi.php';
     <meta charset="UTF-8">
     <title> Home </title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
 
@@ -33,10 +35,8 @@ include 'config/koneksi.php';
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="localhost/astra2/index.php"> 
+    <a class="navbar-brand" href="index.php"> 
     <img src="img/brand.png" alt="logo brand"  height="50"> </a>
-    
-    <a class="nav-item mr-3 nav-link p-3 text-danger" href="pargoy.php">Logout</a>
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="container">
@@ -45,63 +45,54 @@ include 'config/koneksi.php';
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
 
-    
 
-    
     <div class="offcanvas-body">
-      
-      <div class="text-center">
-      <img src="img/brand.png" alt="User" width="150" height="150" class=" align-items-center rounded-circle shadow">
-    </div>
-     
-
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-4">
-          <li class="nav-item">
+        <ul class="navbar-nav mt-4">
+          <li class="btn btn-success bg-success-subtle btn-sm">
             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="upload.php">Upload</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="televalid.php">Televalidasi / Call</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dataup.php">Data Uploaded</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="report_call.php">Report Hasil Call</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="result.php">Result</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="report_valid.php">Report Hasil Validasi</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user.php">User</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="user.php">Edit User</a>
+          </li>
+        </ul>
+<br>
+        <ul class="navbar-nav mt-3 mx-auto">
+          <li class="btn btn-primary bg-primary-subtle btn-sm">
+            <a class="nav-link" href="setting.php">Setting Akun</a>
+          </li>
+          <br>
+         
+          <li class="btn btn-danger bg-danger-subtle btn-sm">
+            <a class="nav-link" href="pargoy.php">Logout</a>
           </li>
         </ul>
           </div>
-
           </div>
           </div>  
     </div>
   </div>
 </nav>
+
 <div class="container  mt-4">
-
-<div class="card border-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">1</h5>
-    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, similique.</p>
-  </div>
-  <br>
-  <div class="card border-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">2</h5>
-    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, magni.</p>
-  </div>
-  <br>
-  <div class="card border-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">3</h5>
-    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, corrupti.</p>
-  </div>
-
+<div id="content">
+  
+<h1>
+  Welcome, Admin
+</h1>
+</div>
 </div>
 
 
