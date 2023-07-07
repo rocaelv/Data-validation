@@ -3,13 +3,14 @@ session_start();
 
 if($_SESSION['password']=='')
 {
-  if (!isset($_SESSION['CREATED'])) {
-    $_SESSION['CREATED'] = time();
-} else if (time() - $_SESSION['CREATED'] > 300) {
-    // session started more than 30 minutes ago
-    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
-    $_SESSION['CREATED'] = time();  // update creation time
-}
+    if((time() - $_SESSION['login_time']) > 900)
+    {
+      header("location: pargoy.php");
+    }
+    else
+    {
+      header("location: login.php");    
+    }
 }
 include 'config/koneksi.php';
  ?>
@@ -28,6 +29,7 @@ include 'config/koneksi.php';
 </head>
 <body>
 
+
 <!-- NAVBAR -->
 <nav class="navbar bg-body-tertiary">
     
@@ -38,8 +40,6 @@ include 'config/koneksi.php';
 
     <a class="navbar-brand" href="index.php"> 
     <img src="img/brand.png" alt="logo brand"  height="50"> </a>
-    
-    <a class="nav-item mr-3 nav-link p-3 text-danger" href="pargoy.php">Logout</a>
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="container">
@@ -48,35 +48,41 @@ include 'config/koneksi.php';
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
 
-    
 
-    
     <div class="offcanvas-body">
-      
-      <div class="text-center">
-      <img src="img/brand.png" alt="User" width="150" height="150" class=" align-items-center rounded-circle shadow">
-    </div>
-     
-
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-4">
-          <li class="nav-item">
+        <ul class="navbar-nav mt-4">
+          <li class="btn btn-success bg-success-subtle btn-sm">
             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="upload.php">Upload</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="televalid.php">Televalidasi / Call</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dataup.php">Data Uploaded</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="report_call.php">Report Hasil Call</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="result.php">Result</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="report_valid.php">Report Hasil Validasi</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user.php">User</a>
+          <br>
+          <li class="btn btn-success bg-success-subtle btn-sm">
+            <a class="nav-link" href="user.php">Edit User</a>
+          </li>
+        </ul>
+<br>
+        <ul class="navbar-nav mt-3 mx-auto">
+          <li class="btn btn-primary bg-primary-subtle btn-sm">
+            <a class="nav-link" href="setting.php">Setting Akun</a>
+          </li>
+          <br>
+         
+          <li class="btn btn-danger bg-danger-subtle btn-sm">
+            <a class="nav-link" href="pargoy.php">Logout</a>
           </li>
         </ul>
           </div>
-
           </div>
           </div>  
     </div>
@@ -84,7 +90,62 @@ include 'config/koneksi.php';
 </nav>
 
 <div class="container mt-4">
-    <h1>User</h1>
+    <h3>Edit User</h3>
+    
+    <div class="user">
+	<br/>
+		<form action="proses_register.php" method="post" onSubmit="return validasi()">
+      
+      <div>
+        <select class="form-select" name="user_type" id="floatingInput" value="<?php echo @$_SESSION['user_type']?>">
+        <option selected>Level</option>
+        <option value="1">ADM</option>
+        <option value="2">TLV</option>
+        <option value="3">HC3</option>
+        <option value="4">DLR</option>
+      </select>
+      </div>
+      <br>
+      <div class="form-floating mb-3">
+        <input type="text" name="nama" class="form-control" id="floatingInput" value="<?php echo @$_SESSION['nama']?>" placeholder="Nama Lengkap" autocomplete="off">
+        <label for="floatingInput">Nama Lengkap</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" name="email" class="form-control" id="floatingInput" value="<?php echo @$_SESSION['email']?>" placeholder="E-mail" autocomplete="off">
+        <label for="floatingInput">E-mail</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" name="username" class="form-control" id="floatingInput" value="<?php echo @$_SESSION['username']?>" placeholder="Username" autocomplete="off">
+        <label for="floatingInput">Username</label>
+      </div>
+      
+       <div class="form-floating mb-3">
+        <input type="password" name="password" class="form-control" id="floatingPassword" value="<?php echo @$_SESSION['password']?>" placeholder="Password" autocomplete="off">
+        <label for="floatingPassword">Password</label>
+      </div>
+			</div>			
+      <div class="form-floating mb-3">
+        <input type="password" name="password2" class="form-control" id="floatingPassword2" value="<?php echo @$_SESSION['password2']?>" placeholder="Konfirmasi Password" autocomplete="off">
+        <label for="floatingPassword"> Konfirmasi Password </label>
+        <br>
+			<div>
+        <button class="btn btn-danger" type="reset">Reset</button>
+        <button class="btn btn-success" type="submit">Simpan</button>
+			</div>
+      <br>
+      <?php
+      if( isset($_SESSION['eror'])){ ?>
+      <div class="alert alert-warning" role="alert">
+        <?php echo $_SESSION['eror'] ?>
+      </div> <?php } ?>
+      <?php
+      if(isset($_SESSION['message'])){ ?>
+      <div class="alert alert-success" role="alert">
+        <?php echo $_SESSION['message'] ?>
+      </div> <?php } ?>
+		</form>
+	</div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
