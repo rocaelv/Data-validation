@@ -54,7 +54,7 @@ session_start();
                                 </div>
                                 <?php } ?>
                                 <?php
-                                if(isset($_SESSION['massage'])){
+                                if(isset($_SESSION['message'])){
                                     ?>
                                     <div class="alert alert-success" role="alert">
                                         <?php echo $_SESSION['message'] ?>
