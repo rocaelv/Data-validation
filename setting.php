@@ -11,23 +11,21 @@ if($_SESSION['password']=='')
     {
       header("location: login.php");    
     }
-}
+  } 
 include 'config/koneksi.php';
  ?>
  
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Televalidasi</title>
+    <title> Home </title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="index.c. ss">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-
 
 <!-- NAVBAR -->
 <nav class="navbar bg-body-tertiary">
@@ -88,16 +86,18 @@ include 'config/koneksi.php';
   </div>
 </nav>
 
-<div class="container">
+<div class="container  mt-4">
+<div id="content">
+    
+
+
 
 </div>
-<script src="https://localhost/astra2/stopwatch.js"></script>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
 <script src="https://localhost/astra2/js/bootstrap.js"></script>
-
-
-
-
 </body>
 </html>

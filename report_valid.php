@@ -23,7 +23,7 @@ include 'config/koneksi.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Televalidasi</title>
+    <title>Result</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
@@ -88,16 +88,16 @@ include 'config/koneksi.php';
   </div>
 </nav>
 
-<div class="container">
+<div class="container mt-4">
+    <h1>Result</h1>
 
 </div>
-<script src="https://localhost/astra2/stopwatch.js"></script>
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
 <script src="https://localhost/astra2/js/bootstrap.js"></script>
-
-
-
-
+</body>
 </body>
 </html>
