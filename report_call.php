@@ -89,64 +89,39 @@ include 'config/koneksi.php';
 </nav>
 
 <div class="container mt-4">
-    <h1>Report Hasil Call</h1>
-    <?php
 
-class Timer {
-
-   var $classname = "Timer";
-   var $start     = 0;
-   var $stop      = 0;
-   var $elapsed   = 0;
-
-   # Constructor
-   function Timer( $start = true ) {
-      if ( $start )
-         $this->start();
-   }
-
-   # Start counting time
-   function start() {
-      $this->start = $this->_gettime();
-   }
-
-   # Stop counting time
-   function stop() {
-      $this->stop    = $this->_gettime();
-      $this->elapsed = $this->_compute();
-   }
-
-   # Get Elapsed Time
-   function elapsed() {
-      if ( !$elapsed )
-         $this->stop();
-
-      return $this->elapsed;
-   }
-
-   # Resets Timer so it can be used again
-   function reset() {
-      $this->start   = 0;
-      $this->stop    = 0;
-      $this->elapsed = 0;
-   }
-
-   #### PRIVATE METHODS ####
-
-   # Get Current Time
-   function _gettime() {
-      $mtime = microtime();
-      $mtime = explode( " ", $mtime );
-      return $mtime[1] + $mtime[0];
-   }
-
-   # Compute elapsed time
-   function _compute() {
-      return $this->stop - $this->start;
-   }
-}
-
-?>
+<div class="row">
+  <div class="col">
+    <label for="purifikator">Tampilan</label>
+    <select class="form-select" aria-label="Default select" id="purifikator">
+    <option selected>Tampilan</option>
+    <option value="1">Harian</option>
+    <option value="2">Kumulatif</option>
+  </select>
+  </div>
+  <div class="col">
+    <label for="startDate">Tanggal Cetak</label>
+    <input id="startDate" class="form-control" type="date" />
+    <span id="startDateSelected"></span>
+  </div>
+  <div class="col">
+    <label for="endDate"></label>
+    <input id="endDate" class="form-control" type="date" />
+    <span id="endDateSelected"></span>
+  </div>
+  <div class="col">
+    <label for="purifikator">Nama Purifikator</label>
+    <select class="form-select" aria-label="Default select" id="purifikator">
+    <option selected>Nama Purifikator</option>
+    <option value="1">Dita</option>
+    <option value="2">Afifah</option>
+    <option value="3">Yossy</option>
+    <option value="4">Nur</option>
+</select>
+  </div>
+  </div>
+</div>
+  
 </div>
 
     
