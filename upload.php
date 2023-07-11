@@ -88,8 +88,86 @@ include 'config/koneksi.php';
   </div>
 </nav>
 
-<div class="container">
+<div class="container mt-4">
 
+<div class="row g-3">
+  <div class="col-auto">
+    <div class="mb-3">
+      <label for="uploaddata" class="form-label">Upload Template Data CDB</label>
+      <input type="file" class="form-control" id="uploaddata" multiple>
+      <br>
+      <button type="reset" class="btn btn-danger">Reset</button>
+    <button type="button" class="btn btn-success">Simpan</button>
+    </div>
+  </div>
+  <div class="col-auto mt-5">
+      <button type="button" class="btn btn-primary">Preview</button>
+      <button type="button" class="btn btn-primary">Download Contoh Template</button>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
+      <thead class="table-danger">
+        <tr>
+          <th>No. Faktur</th>  
+          <th>No. Rangka</th>
+          <th>Tgl Cetak</th>
+          <th>Tgl Mohon</th>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>Kec.</th>
+          <th>Agama</th>
+          <th>Hobi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BB4 /008518/W</td>
+          <td>JBK11XPK910068</td>
+          <td>01042023</td>
+          <td>31032023</td>
+          <td>NURLELA</td>
+          <td>PANGAKALAN BAYAT RT 003 RW 006</td>
+          <td>BAYUNG LENCIR</td>
+          <td>Islam</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>BB4 /009856/W</td>
+          <td>JBK119PK911065</td>
+          <td>01042023</td>
+          <td>31032023</td>
+          <td>DEKA KURNIAWAN</td>
+          <td>DUSUN 3 RT 002 RW 003</td>
+          <td>SUNGAI LILIN</td>
+          <td>Islam</td>          
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>BB4 /013787/W</td>
+          <td>JBK117PK913722</td>
+          <td>01042023</td>
+          <td>31032023</td>
+          <td>NYIMAS RODIAH</td>
+          <td>JL TAQWA MATA MERAH PERUM GRAHA FORTUNA BLOK C NO 16 RT 025 RW 007</td>
+          <td>KALIDONI</td>
+          <td>Islam</td>          
+          <td>Recall 0</td>
+        </tr>
+        <tr>
+          <td>BB4 /028746/W</td>
+          <td>JBK111PK921914</td>
+          <td>01042023</td>
+          <td>31032023</td>
+          <td>ENI DARYANTI</td>
+          <td>DUSUN I  RT 005 RW 000</td>
+          <td>KEDATON PENINJAUAN RAYA</td>
+          <td>Islam</td>          
+          <td>Recall 0</td>
+        </tr>
+      </tbody>
+
+    </table>
 </div>
 <script src="https://localhost/astra2/stopwatch.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
