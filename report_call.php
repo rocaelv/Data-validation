@@ -121,6 +121,83 @@ include 'config/koneksi.php';
   </div>
   </div>
 </div>
+<br>
+
+<div class="row">
+  <div class="col">
+  <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Nama Purifikator</th>  
+          <th>Dita</th>
+          <th>Yossy</th>
+          <th>Nur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jumlah Data</td>
+          <td>100</td>
+          <td>100</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Total Call</td>
+          <td>100</td>
+          <td>100</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Bersedia divalidasi</td>
+          <td>60</td>
+          <td>60</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Mailbox</td>
+          <td>10</td>
+          <td>10</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Tidak Diangkat</td>
+          <td>25</td>
+          <td>25</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Tulalit</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Salah Sambung</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Redundant</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Nomor Salah</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Hubungi Kembali</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+  </div>
+</div>
   
 </div>
 
